@@ -109,16 +109,16 @@ public class GeneratorMojo extends AbstractMojo {
                 getLog().info("Genererating the Hudson class for " + metric.getLabel() + " metric");
                 switch (metric.getToolType()) {
                     case TEST:
-                        generateTest("org.jenkinsci.lib.dtkit.model", metric);
+                        generateTest("com.thalesgroup.dtkit.metrics.hudson.model", metric);
                         break;
                     case COVERAGE:
-                        generateCoverage("org.jenkinsci.lib.dtkit.model", metric);
+                        generateCoverage("com.thalesgroup.dtkit.metrics.hudson.model", metric);
                         break;
                     case MEASURE:
-                        generateMeasure("org.jenkinsci.lib.dtkit.model", metric);
+                        generateMeasure("com.thalesgroup.dtkit.metrics.hudson.model", metric);
                         break;
                     case VIOLATION:
-                        generateViolation("org.jenkinsci.lib.dtkit.model", metric);
+                        generateViolation("com.thalesgroup.dtkit.metrics.hudson.model", metric);
                         break;
                 }
             }
